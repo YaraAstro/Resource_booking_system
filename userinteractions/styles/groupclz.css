@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.pgdn{
+    display: flex;
+    align-items: stretch;
+    margin-top: 75px;
+}
+
+.block:nth-child(1){
+    width: 250px;
+    border-right: 2px solid rgba(116, 161, 158, 0.35);
+    padding-left: 15px;
+}
+
+.block:nth-child(2){
+    width: calc(100% - 250px);
+}
+
+#adclz,
+#schclz,
+#mkatt{
+    display: none;
+}
+
+h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 25px 0;
+    background: linear-gradient( 225deg, rgb(40, 60, 134), rgb(69, 162, 71));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    width: fit-content;
+}
+
+h4{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 20px 0;
+    width: fit-content;
+    margin-left: 250px;
+}
+
+h4 span{
+    font-size: 0.85em;
+}
+
+.sblk{
+    border-bottom-left-radius: 25px;
+    border-bottom: 5px solid rgba(116, 161, 158, 0.35);
+    padding-bottom: 25px;
+    padding-left: 35px;
+}
+
+.sblk:last-child{
+    border-bottom: none;
+}
+
+table{
+    width: 100%;
+    border-spacing: 15px;
+}
+
+th{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 1.15em;
+}
+
+td{
+    font-size: 1.15em;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
+td input{
+    font-size: 1.15em;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    background: rgba(245, 245, 245, 0.35);
+    padding: 5px;
+}
+
+td input:focus{
+    outline: 1px solid black;
+}
+
+td input::placeholder{
+    color: rgb(134, 134, 134);
+}
+
+.close{
+    outline: none;
+    border: none;
+    font-size: 1.15em;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: .35s ease-in-out;
+    background: none;
+    position: absolute;
+    top: 10px;
+    right: 35px;
+    font-family: 'Caveat', cursive;
+    background: linear-gradient(to right, rgb(237, 33, 58), rgb(147, 41, 30));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transform: rotate(315deg);
+    text-shadow: 1px 1px 5px rgb(63, 19, 19, .5);
+}
+
+.close:hover{
+    transform: rotate(0deg);
+}
+
+.adbtns {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 35px;
+    margin-top: 35px;
+}
+
+.adbtns button{
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.25em;
+    border-radius: 15px;
+    transition: .35s ease-in-out;
+    cursor: pointer;
+}
+
+.adbtns button:hover{
+    background: rgb(199, 199, 199);
+    color: ghostwhite;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-left: 250px;
+    width: calc(80% - 250px);
+}
+
+.blo{
+    display: flex;
+    flex-direction: column;
+}
+
+.blo:last-child{
+    align-items: flex-end;
+}
+
+.blo label{
+    font-size: 1.15em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.blo textarea,
+.blo input{
+    width: 350px;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 1.25em;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1.5px solid rgb(133, 133, 133);
+}
+
+.blo input:focus{
+    outline: none;
+    font-size: 1.25em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.blo input::placeholder{
+    color: rgb(187, 187, 187);
+}
+
+button[type = "submit"]{
+    outline: none;
+    border: none;
+    width: fit-content;
+    font-size: 1.15em;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: .35s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+button[type = "submit"]:hover{
+    background-color: rgb(0, 150, 0);
+    color: rgb(184, 255, 177);
+}
+
+.res01 button,
+.res02 button{
+    margin: 25px 0;
+    margin-left: 75%;
+}
+
+tr:nth-child(odd){
+    background: azure;
+}
+
+tr:nth-child(even){
+    background: rgb(233, 235, 226);
+}
+
+tr:first-child{
+    background: unset;
+}
+
+.searchbx{
+    margin: 35px 0;
+    width: 75%;
+    background: gainsboro;
+    left: -35px;
+    padding: 20px;
+    border-top-right-radius: 75px;
+    border-bottom-right-radius: 75px;
+}
+
+.searchbx input{
+    border: none;
+    outline: none;
+    padding: 5px 75px 5px 15px;
+    width: 85%;
+    font-size: 1.25em;
+    font-family: 'Poppins', sans-serif;
+    border-top-right-radius: 75px;
+    border-bottom-right-radius: 75px;
+}
+
+.searchbx input::placeholder{
+    color: gainsboro;
+}
+
+.searchbx button{
+    border: none;
+    outline: none;
+    background-color: unset;
+    transition: .35s ease-in-out;
+    position: absolute;
+    top: 13px;
+    right: 17.5%;
+}
+
+.searchbx button img{
+    width: 35px;
+}
+
+.searchbx button:hover{
+    background: unset;
+    filter: hue-rotate(135deg);
+}

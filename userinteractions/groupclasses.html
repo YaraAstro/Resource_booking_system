@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Group Class | Ascepius Healthcare
+    </title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../styles/scrollbar.css">
+    <link rel="stylesheet" href="./styles/groupclz.css">
+    <script src="./javascripts/reviewPatient.js"></script>
+</head>
+<body>
+    <div id="page">
+        <?php include '../userui/navigation.php' ?>
+
+        <div class="pgdn">
+            <div class="block">
+                <?php include '../userui/sidebar_instructor.php' ?>
+            </div>
+            <div class="block">
+                <div class="sblk">
+                    <h3>Class Enrollments</h3>
+                    <div class="searchbx">
+                        <input type="search" name="schbar01" id="schbar01" placeholder="Enter Group Class Name ...">
+                        <button type="submit">
+                            <img src="./images/search_FILL0_wght400_GRAD0_opsz48.svg" alt="search-icon">
+                        </button>
+                    </div>
+                    <div class="res01">
+                        <h4>Group Class Name : <span>Group Clz Id</span></h4>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>Patient Name</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Kamal Kamal</td>
+                                <td>enroled date</td>
+                                <td>
+                                    <input type="text" name="enstat" id="enstat" placeholder="accept or reject">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Kamal Kamal</td>
+                                <td>enroled date</td>
+                                <td>
+                                    <input type="text" name="enstat" id="enstat" placeholder="accept or reject">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Kamal Kamal</td>
+                                <td>enroled date</td>
+                                <td>
+                                    <input type="text" name="enstat" id="enstat" placeholder="accept or reject">
+                                </td>
+                            </tr>
+                        </table>
+                        <button type="submit">Update</button>
+                    </div>
+                    <div class="adbtns">
+                        <button onclick="openBlock('adclz')">Add Gruop Class</button>
+                        <button onclick="openBlock('schclz')">Schedule Group Class</button>
+                        <button onclick="openBlock('mkatt')">Mark Attendants</button>
+                    </div>
+                </div>
+                <div class="sblk" id="adclz">
+                    <h3>Add Group Class</h3>
+                    <button class="close" onclick="closeBlock('adclz')">&#9587;</button>
+                    <div class="crt-gpcl">
+                        <form action="./php/create_group_class.php" method="post">
+                            <div class="blo">
+                                <label for="gpclnm">Group Class Name :</label>
+                                <input type="text" name="gpclnm" id="gpclnm">
+                            </div>
+                            <div class="blo">
+                                <label for="gpcldc">Group Class Description :</label>
+                                <textarea name="gpcldc" id="gpcldc"></textarea>
+                            </div>
+                            <div class="blo">
+                                <label for="gpclprq">Group Class Prerequirities :</label>
+                                <input type="text" name="gpclprq" id="gpclprq" placeholder="One Mat, Towel ...">
+                            </div>
+                            <div class="blo">
+                                <label for="gpcldr">Group Class Duration :</label>
+                                <input type="text" name="gpcldr" id="gpcldr" placeholder="4 days...">
+                            </div>
+                            <div class="blo">
+                                <label for="gpclma">Maximum Amount :</label>
+                                <input type="text" name="gpclma" id="gpclma" placeholder="12 or 15... (Just a Number)">
+                            </div>
+                            <div class="blo">
+                                <label for="gpclloc">Location :</label>
+                                <input type="text" name="gpclloc" id="gpclloc">
+                            </div>
+                            <div class="blo">
+                                <label for="gpclpz">Price :</label>
+                                <input type="text" name="gpclpz" id="gpclpz" placeholder="1000.00...">
+                            </div>
+                            <div class="blo">
+                                <button type="submit">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="sblk" id="schclz">
+                    <h3>Schedule Group Class</h3>
+                    <button class="close" onclick="closeBlock('schclz')">&#9587;</button>
+                    <div class="searchbx">
+                        <input type="search" name="schbar01" id="schbar01" placeholder="Enter Group Class Name ...">
+                        <button type="submit">
+                            <img src="./images/search_FILL0_wght400_GRAD0_opsz48.svg" alt="search-icon">
+                        </button>
+                    </div>
+                    <div class="res03">
+                        <h4>Group Class Name : <span>Group Clz Id</span></h4>
+                        <div class="schgcl">
+                            <form action="" method="post">
+                                <div class="blo">
+                                    <label for="scldate">Next Date :</label>
+                                    <input type="date" name="scldate" id="scldate">
+                                </div>
+                                <div class="blo">
+                                    <label for="sclsttm">Begin Time :</label>
+                                    <input type="time" name="sclsttm" id="sclsttm">
+                                </div>
+                                <div class="blo">
+                                    <label for="sclsptm">End Time :</label>
+                                    <input type="time" name="sclsptm" id="sclsptm">
+                                </div>
+                                <div class="blo">
+                                    <button type="submit">Schedule</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="sblk" id="mkatt">
+                    <h3>Mark Attendants</h3>
+                    <button class="close" onclick="closeBlock('mkatt')">&#9587;</button>
+                    <div class="searchbx">
+                        <input type="search" name="schbar01" id="schbar01" placeholder="Enter Group Class Name ...">
+                        <button type="submit">
+                            <img src="./images/search_FILL0_wght400_GRAD0_opsz48.svg" alt="search-icon">
+                        </button>
+                    </div>
+                    <div class="res02">
+                        <h4>Group Class Name : <span>Group Clz Id</span></h4>
+                        <table>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Date</th>
+                                <th>Start Time</th>
+                                <th>Stop Time</th>
+                                <th>Attendant Status</th>
+                            </tr>
+                            <tr>
+                                <td>Kamal Kamal</td>
+                                <td>scheduled day</td>
+                                <td>11:00 A.M</td>
+                                <td>02:00 P.M</td>
+                                <td>
+                                    <input type="text" name="att" id="att" placeholder="ab or pr">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kamal Kamal</td>
+                                <td>scheduled day</td>
+                                <td>11:00 A.M</td>
+                                <td>02:00 P.M</td>
+                                <td>
+                                    <input type="text" name="att" id="att" placeholder="ab or pr">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kamal Kamal</td>
+                                <td>scheduled day</td>
+                                <td>11:00 A.M</td>
+                                <td>02:00 P.M</td>
+                                <td>
+                                    <input type="text" name="att" id="att" placeholder="ab or pr">
+                                </td>
+                            </tr>
+                        </table>
+                        <button type="submit">Mark</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <?php include '../footer.php' ?>
+    </div>
+</body>
+</html>

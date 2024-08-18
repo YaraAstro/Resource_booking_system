@@ -1,0 +1,185 @@
+*{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#page{
+    padding-top: 75px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* top block */
+
+
+.block:nth-child(1){
+    width: 100%;
+    height: max-content;
+}
+
+.block:nth-child(1) .pop{
+    position: absolute;
+    z-index: 3;
+    top: 10vh;
+    right: 10vw;
+    width: 50%;
+    text-align: right;
+}
+
+.block:nth-child(1) .pop h3{
+    font-family: 'sunmora';
+    font-size: 3em;
+}
+
+.block:nth-child(1) .pop p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15em;
+    width: 80%;
+    left: 20%;
+    top: 5vh;
+}
+
+.block:nth-child(1) .pop a{
+    right: 5vw;
+    top: 10vh;
+}
+
+.block:nth-child(1) .pop a img{
+    width: 5vw;
+    transition: .5s ease-in-out;
+    padding: 7.5px;
+    border-radius: 50%;
+}
+
+.block:nth-child(1) .pop a:hover img{
+    filter: hue-rotate(45deg);
+    box-shadow: 0 0 5px lightskyblue,
+        0 0 15px rgba(135, 206, 250, 0.75);
+}
+
+video{
+    position: relative;
+    top: 0.3vw;
+    left: 0;
+    width: 75%;
+}
+
+.block:nth-child(1):before{
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(255,255,255,0) 45%,rgba(255,255,255,1) 85%);
+}
+
+/* second block */
+
+.block:nth-child(2){
+    width: 100%;
+    min-height: 50vh;
+    color: wheat;
+    padding-bottom: 200px;
+}
+.block:nth-child(2):after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('../images/scientist-analyzing-liquid-using-protective-equipment-indoors-generated-by-ai.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    filter: brightness(0.5) ;
+}
+
+.block:nth-child(2) h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 3em;
+    font-weight: normal;
+    top: 10vh;
+    left: 5vw;
+    width: fit-content;
+}
+
+.block:nth-child(2) .bli{
+    top: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.block:nth-child(2) .bli ul li{
+    list-style: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
+    margin: 7.5px 0;
+}
+
+/* counting animator */
+
+.block:nth-child(3){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.block:nth-child(3) .bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    top: -130px;
+}
+
+.block:nth-child(3) .count{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 65px;
+    border-radius: 50px;
+    box-shadow: 0 -2px 5px rgb(255, 255, 255),
+        0 -5px 15px rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(5px);
+}
+
+.block:nth-child(3) .count img{
+    width: 5em;
+}
+
+.block:nth-child(3) .count span{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-style: italic;
+    background: linear-gradient(135deg, rgba(67,206,162,1) 0%,rgba(24,90,157,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.block:nth-child(3) .count p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25em;
+    text-align: center;
+    top: 15px;
+}
+
+.block:nth-child(3) #botqot{
+    width: 80%;
+    font-family: 'sunmora';
+    font-weight: lighter;
+    letter-spacing: 2px;
+    font-size: 1em;
+    font-style: italic;
+    text-align: center;
+    top: -25px;
+}

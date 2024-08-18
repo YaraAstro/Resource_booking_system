@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.pgdn{
+    display: flex;
+    align-items: stretch;
+    margin-top: 75px;
+}
+
+.block:nth-child(1){
+    width: 250px;
+    border-right: 2px solid rgba(116, 161, 158, 0.35);
+    padding-left: 15px;
+}
+
+.block:nth-child(2){
+    width: calc(100% - 250px);
+}
+
+.sblk{
+    border-bottom-left-radius: 25px;
+    border-bottom: 5px solid rgba(116, 161, 158, 0.35);
+    padding-bottom: 25px;
+    padding-left: 35px;
+}
+
+.sblk:last-child{
+    border-bottom: none;
+}
+
+h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.75em;
+    font-weight: normal;
+    margin: 25px 0;
+    background: linear-gradient( 225deg, rgb(40, 60, 134), rgb(69, 162, 71));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    width: fit-content;
+}
+
+.supp form{
+    margin-left: 100px;
+}
+
+.blee{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 85%;
+}
+
+.lob{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-left: 15%;
+}
+
+.lob:last-child{
+    align-items: flex-end;
+}
+
+.blee:last-child{
+    justify-content: flex-end;
+}
+
+.blee .bli{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.blee .bli .blo{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.blee .bli .blo .cix{
+    display: flex;
+    flex-direction: column;
+}
+
+.bol p{
+    font-size: 1.15em;
+    font-family: 'Raleway', sans-serif;
+    margin: 15px 0;
+}
+
+.bol .lbo{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: flex-end;
+    width: 35%;
+}
+
+.bol:last-child{
+    display: flex;
+    padding-right: 500px;
+    justify-content: flex-end;
+}
+
+.bol .lbo label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15em;
+}
+
+.lob label,
+.blee .bli .blo label{
+    font-size: 1.15em;
+    font-family: 'Raleway', sans-serif;
+    margin: 10px 0;
+}
+
+.lob input,
+.blee .bli .blo select,
+.blee .bli .blo input{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1.5px solid rgb(133, 133, 133);
+}
+
+button[type = "submit"]{
+    outline: none;
+    border: none;
+    width: fit-content;
+    font-size: 1.15em;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: .35s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    margin: 25px 0;
+}
+
+button[type = "submit"]:hover{
+    background-color: rgb(0, 150, 0);
+    color: rgb(184, 255, 177);
+}
+
+.delete{
+    outline: none;
+    border: none;
+    width: fit-content;
+    font-size: 1.15em;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: .35s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    margin: 25px 0;
+}
+
+.delete:hover{
+    background-color: rgb(150, 0, 0);
+    color: rgb(255, 177, 177);
+}

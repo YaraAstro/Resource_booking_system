@@ -1,0 +1,65 @@
+.load-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load-frame{
+    position: relative;
+    width: fit-content;
+}
+
+.loader{
+    width: 45vw;
+    position: relative;
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 0;
+    z-index: 5;
+    stroke-width: 25px;
+    animation: load 3s infinite linear;
+}
+
+.load-frame::before{
+    position: absolute;
+    content: '';
+    width: 26vw;
+    height: 26vw;
+    background-image: url('../images/logo_loading.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 4%;
+    left: 23%;
+    filter: blur(10px) brightness(1.5);
+    opacity: 0.75;
+    animation: load-fade 3s infinite linear;
+}
+
+@keyframes load {
+    0%{
+        stroke-dashoffset: 4000;
+    }
+    50%,
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes load-fade {
+    0%,
+    50%{
+        opacity: 0;
+    }  
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }  
+}

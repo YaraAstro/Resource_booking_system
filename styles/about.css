@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page{
+    padding-top: 75px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fame{
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.fame p,
+.fame h3{
+    width: 50%;
+}
+
+
+.fame p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25em;
+    padding-top: 5vh;
+    font-weight: normal;
+}
+
+.fame h3{
+    font-family: 'sunmora';
+    font-size: 3em;
+    font-weight: normal;
+}
+
+.fame:nth-child(1) p,
+.fame:nth-child(1) h3,
+.fame:nth-child(4) p,
+.fame:nth-child(4) h3{
+    left: 10vw;
+    top: 10vh;
+}
+
+.fame:nth-child(5) p,
+.fame:nth-child(5) h3,
+.fame:nth-child(2) p,
+.fame:nth-child(2) h3{
+    left: 40vw;
+    text-align: right;
+    top: 10vh;
+}
+
+
+.fame:nth-child(1) h3,
+.fame:nth-child(4) h3{
+    background: linear-gradient(135deg, rgba(67,206,162,1) 0%,rgba(24,90,157,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.fame:nth-child(2) h3,
+.fame:nth-child(5) h3{
+    background: linear-gradient(45deg, rgba(24,90,157,1) 0%,rgba(67,206,162,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.fame:nth-child(1):before{
+    content: '';
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 65%), url('../images/doctor-is-going-examine-his-patient-using-his-stethoscope-sitting-people\ .jpg');
+    background-position: right top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 0;
+}
+
+.fame:nth-child(2):before{
+    content: '';
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 35%,rgba(255,255,255,1) 100%), url('../images/health-still-life-with-copy-space.jpg');
+    background-position: left top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+}
+
+.fame:nth-child(4):before{
+    content: '';
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,1) 25%,rgba(255,255,255,0) 85%), url('../images/medium-shot-doctor-talking-patient.jpg');
+    background-position: right top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 0;
+}
+
+.fame:nth-child(5):before{
+    content: '';
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 35%,rgba(255,255,255,1) 75%), url('../images/young-female-doctor-posing-corridor-hospital.jpg');
+    background-position: left top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+}
+
+
+.fame:nth-child(3):before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../images/team-young-specialist-doctors-standing-corridor-hospital.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(0.85) blur(5px) hue-rotate(320deg);
+}
+
+.fame:nth-child(6):before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../images/happy-general-practitioner-measuring-blood-pressure-mature-man-while-being-home-visit.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(0.85) blur(5px) hue-rotate(231deg);
+}
+
+
+.fame:nth-child(3),
+.fame:nth-child(6){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* sliders */
+
+.slideshow {
+  position: relative;
+  width: 85%;
+  height: 20em;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide .content{
+    padding: 15px;
+}
+
+
+.slide .content p{
+    font-family: 'Courgette', cursive;
+    font-size: 2em;
+    padding-top: 0;
+    width: 100%;
+    animation: swing-in-left-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.slide .content p::after{
+    content: open-quote;
+    font-family: 'Lobster Two', cursive;
+    font-size: 5em;
+    position: absolute;
+    transform: rotateX(180deg) rotateY(180deg);
+    top: -25vh;
+    right: 2vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px cornsilk;
+    z-index: -1;
+}
+
+.slide .content h3{
+    font-family: 'Lobster Two', cursive;
+    font-weight: normal;
+    font-size: 1.75em;
+    text-align: right;
+    width: 100%;
+    font-style: italic;
+    animation: text-flicker-in-glow 0.75s linear 3 both;
+}
+
+
+.slide .content h4{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    top: 10px;
+    text-align: right;
+    animation: text-flicker-in-glow 0.5s linear 2 both;
+}
+
+@keyframes swing-in-left-fwd {
+    0% {
+      transform: rotateY(100deg);
+      transform-origin: left;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateY(0);
+      transform-origin: left;
+      opacity: 1;
+    }
+}
+
+@keyframes text-flicker-in-glow {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    10.1% {
+      opacity: 1;
+      text-shadow: none;
+    }
+    10.2% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    20% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    20.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    }
+    20.6% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    30% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    30.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    30.5% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    30.6% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    45% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    45.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    55% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+    55.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    57% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    57.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+    60% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+    60.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    65% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    65.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    75% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    75.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    77% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    77.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    85% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    85.1% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    86% {
+      opacity: 0;
+      text-shadow: none;
+    }
+    86.1% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+}
+  
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.5);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.dot.active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+}

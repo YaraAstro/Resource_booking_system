@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.sideBar .blo:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.sideBar .blo:nth-child(1) .blie:nth-child(1){
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imag{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+#imag img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#imag::before{
+    content: '';
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    top: -3px;
+    left: -3px;
+    border-radius: 50%;
+    filter: blur(5px);
+}
+
+.blie .text h4{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.blie .text h4:nth-child(1){
+    font-size: 2em;
+}
+
+.blo:nth-child(2) ul{
+    margin-right: 50px;
+    margin-top: 25px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.25em;
+}
+
+.blo:nth-child(2) ul li{
+    list-style: none;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 25px;
+    transition: text-align, box-shadow .75s ease-in-out;
+}
+
+.blo:nth-child(2) ul li:hover{
+    box-shadow: 0 0 5px rgb(119, 155, 149),
+        0 0 15px rgba(137, 180, 174, 0.75);
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    .blo:nth-child(2) ul{
+        margin-right: 0;
+        font-size: 1.15em;
+    }
+}

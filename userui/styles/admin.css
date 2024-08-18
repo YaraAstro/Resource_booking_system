@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pgdn{
+    display: flex;
+    margin-top: 100px;
+}
+
+.block:nth-child(1){
+    border-right: 2px solid rgba(116, 161, 158, 0.35);
+    padding-left: 15px;
+}
+
+.sblk{
+    width: calc(100vw - 310px);
+    padding-bottom: 25px;
+    padding-left: 35px;
+    border-bottom-left-radius: 25px;
+}
+
+h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 25px 0;
+    background: linear-gradient( 225deg, rgb(40, 60, 134), rgb(69, 162, 71));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    width: fit-content;
+}
+
+.sblk{
+    border-bottom: 5px solid rgba(116, 161, 158, 0.35);
+}
+
+.sblk:last-child{
+    border-bottom: none;
+}
+
+.sblk:nth-child(1) .brik div{
+    width: calc(100vw - 450px);
+    padding: 10px;
+    border-radius: 10px;
+    left: 7.5%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15em;
+    background: linear-gradient(135deg, rgba(0, 195, 255, 0.25) 0%, rgba(255, 255, 28, 0.25) 100%);
+}
+
+.sblk:nth-child(2) .brik div{
+    width: calc(100vw - 450px);
+    padding: 10px;
+    border-radius: 10px;
+    left: 7.5%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15em;
+    background: linear-gradient(135deg, rgb(253, 252, 71, 0.25), rgb(36, 254, 65, 0.25));
+}
+
+.sblk:nth-child(3) .brik div{
+    width: calc(100vw - 450px);
+    padding: 10px;
+    border-radius: 10px;
+    left: 7.5%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15em;
+    background: linear-gradient(135deg, rgba(31, 162, 255, 0.25) 0%, rgba(18, 215, 250, 0.25) 50%, rgba(166, 255, 203, 0.5) 100%);
+}
+
+.sblk:nth-child(4) .brik div{
+    width: calc(100vw - 450px);
+    padding: 10px;
+    border-radius: 10px;
+    left: 7.5%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15em;
+    background: linear-gradient(135deg, rgb(247, 255, 0, 0.25), rgb(219, 54, 164, 0.25));
+}
+
+.sblk:last-child .brik div{
+    width: calc(100vw - 450px);
+    padding: 10px;
+    border-radius: 10px;
+    left: 7.5%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15em;
+    background: linear-gradient(135deg, rgb(52, 148, 230, 0.25), rgb(236, 110, 173, 0.25));
+}

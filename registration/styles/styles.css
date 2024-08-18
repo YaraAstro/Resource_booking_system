@@ -1,0 +1,249 @@
+*{
+    margin: 0%;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+/* logo in the top left corner */
+
+.top-logo{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: fit-content;
+    z-index: 10;
+    background-color: white;
+    border-bottom-right-radius: 75px;
+    box-shadow: 1px 1px 5px rgb(0 96 83);
+}
+
+.top-frame{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.top-frame img{
+    width: 4em;
+    margin-right: 15px;
+}
+
+.top-frame h4{
+    font-family: 'sunmora';
+    text-transform: uppercase;
+    color: rgb(0, 116, 146);
+    font-size: 3em;
+}
+
+.top-frame p{
+    font-family: 'contra';
+    color: rgb(37, 202, 149);
+    font-size: 1.5em;
+    letter-spacing: .25em;
+}
+
+/* card customization */
+
+.frame{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 97.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1vw;
+}
+
+.container .content{
+    position: relative;
+    z-index: 5;
+}
+
+.container .content img{
+    position: absolute;
+    top: -40%;
+    left: 65%;
+    width: 30%;
+}
+
+.svg-back{
+    width: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}
+
+.svg-back .waves{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.container .box{
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 20px;
+    position: relative;
+    border-bottom: 2px solid rgba(200, 255, 238, 0.25);
+    background-color: rgba(37, 202, 150, 0.15);
+    color: rgba(0, 31, 39, 0.35);
+    overflow: hidden;
+    min-height: 250px;
+}
+
+.container .content:nth-child(1) .box{
+    border-left: 2px solid rgba(200, 255, 238, 0.25);
+}
+
+.container .content:nth-child(3) .box{
+    border-right: 2px solid rgba(200, 255, 238, 0.25);
+}
+
+.container .content:nth-child(2) .box{
+    border-bottom: 2px solid rgba(219, 247, 255, 0.25);
+    background-color: rgba(0, 116, 146, 0.15);
+    color: rgba(8, 46, 34, 0.35);
+}
+
+.container .box h3{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 5em;
+    position: absolute;
+    text-align: right;
+    z-index: -1;
+    line-height: .85em;
+    top: 3%;
+    right: 2%;
+}
+
+.container .content:nth-child(1) h3{
+    top: auto;
+}
+
+.container .box p{
+    font-family: 'Raleway', sans-serif;
+    width: 80%;
+    left: 5%;
+    text-align: left;
+    position: relative;
+    margin: 25px 0;
+    font-size: 1em;
+    color: rgb(1, 0, 34);
+}
+
+.container .box a{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(37 202 149);
+    padding: 8px 15px;
+    border-radius: 25px;
+    color: rgb(0 116 146);
+    transition: .5s ease-in-out;
+    position: absolute;
+    z-index: 5;
+    top: 80%;
+    left: auto;
+}
+
+.container .box a:hover{
+    background-color: #007492;
+    color: rgb(44, 238, 176);
+    box-shadow: 0 0 10px #0f5a42;
+}
+
+/* Media Query for Laptops */
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+/* Media Query for Tablets */
+
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        width: 55%;
+    }
+
+    .container .content{
+        margin-top: 10em;
+    }
+}
+
+/* Media Query for Mobile */
+
+@media screen and (max-width: 425px) {
+
+    body{
+        height: fit-content;
+    }
+
+    /* logo in the top left corner */
+    .top-logo{
+        width: 100%;
+        border-radius: 0%;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        box-shadow: 0px 1px 5px rgb(0 96 83);
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+    }
+
+    .top-frame{
+        width: fit-content;
+        height: fit-content;
+        padding: 0%;
+    }
+    
+    .top-frame img{
+        width: 3em;
+    }
+
+    .top-frame h4{
+        font-size: 2em;
+    }
+
+    .top-frame p{
+        font-size: 1.25em;
+    }
+
+    /* card customization */
+    .container{
+        width: 90%;
+    }
+
+    .svg-back{
+        transform: rotate(270deg) scale(4,2);
+        bottom: unset;
+        top: 60%;
+        left: unset;
+        right: -50%;
+        width: 100%;
+    }
+
+    .container .content img{
+        left: 0%;
+        width: 35%;
+    }
+
+}

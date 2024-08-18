@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.pgdn{
+    width: 100%;
+    margin-top: 75px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame:nth-child(1){
+    width: 25%;
+    border-right: 1px solid rgb(0, 82, 212, 0.35);
+    background: linear-gradient(to right, rgba(225,225,225,0) 35%,rgba(0, 82, 212, 0.35) 100%);
+}
+
+.frame:nth-child(2){
+    width: 75%;
+    border-left: 1px solid rgb(0, 82, 212, 0.35);
+    width: 100%;
+}
+
+.filter-box{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 25px;
+}
+
+.filter-box .box{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-box .box .blo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    left: 25px;
+    top: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+
+.filter-box .box .filnm{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.15em;
+}
+
+.filter-box .box .blo input[type = "date"],
+.filter-box .box .blo select{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+
+.filter-box .box .blo .blew input[type = "radio"]{
+    visibility: hidden;
+}
+
+.rad{
+    width: 15px;
+    position: absolute;
+    left: -5px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 255, 115);
+}
+
+.rad::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    inset: 3px;
+    background: linear-gradient(135deg, rgb(0, 201, 255), rgb(146, 254, 157));
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.filter-box .box .blo .blew input[type = "radio"]:checked ~ .rad::after{
+    opacity: 1;
+}
+
+.filter-box .box:nth-child(4) .blo p{
+    font-size: 0.75em;
+}
+
+#pric{
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 25px;
+    border: 1px solid gray;
+}
+
+#pric::-webkit-slider-thumb{
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgb(0, 201, 255), rgb(146, 254, 157));
+}
+
+.filter-box button{
+    padding: 5px 25px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin-top: 25px;
+    left: 60%;
+    color: rgb(0 116 146);
+    background-color: rgb(37, 202, 149);
+    transition: .35s ease-in-out;
+    cursor: pointer;
+}
+
+.filter-box button:hover{
+    background-color: rgb(0 116 146);
+    color: rgb(37, 202, 149);
+}
+
+.frame:nth-child(2) .search-box{
+    padding: 25px 75px 25px 50px;
+    width: fit-content;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: linear-gradient(to left, rgb(156, 236, 251, 0.5), rgb(101, 199, 247, 0.5), rgb(0, 82, 212, 0.35));
+}
+
+.frame:nth-child(2) .search-box button{
+    outline: none;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 30px;
+    right: 85px;
+}
+
+.frame:nth-child(2) .search-box button img{
+    width: 35px;
+}
+
+.frame:nth-child(2) .search-box input{
+    border: none;
+    width: 650px;
+    font-size: 1.25em;
+    opacity: none;
+    padding: 10px;
+    padding-right: 55px;
+    border-radius: 5px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.frame:nth-child(2) .search-box input::placeholder{
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+}
+
+.frame:nth-child(2) .search-box input:focus{
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-list{
+    padding: 35px 75px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.content-list h2{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+}
+
+.content-list .doc-cont{
+    width: fit-content;
+    padding: 15px;
+    border-radius: 25px;
+    border-top: 0.5px solid rgb(0, 255, 115, .25);
+    border-left: 2px solid rgb(58, 255, 206, .35);
+    border-right: 2px solid rgb(58, 255, 206, .35);
+    border-bottom: 5px solid rgb(57, 255, 146, .5);
+    font-family: 'Raleway', sans-serif;
+}
+
+.content-list .doc-cont h4{
+    font-weight: normal;
+}
+
+.content-list .doc-cont .dcfl{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dcfl .imap{
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgb(69, 167, 121);
+}
+
+.dcfl .imap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center;
+}
+
+.dcfl .flct{
+    padding: 10px;
+}
+
+.dcfl .flct:last-child{
+    text-align: right;
+}
+
+.content-list::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(156, 236, 251, 0.5), rgb(101, 199, 247, 0.5), rgb(0, 82, 212, 0.35));
+}
+
+.content-list::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-top-left-radius: 25px;
+}

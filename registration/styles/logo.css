@@ -1,0 +1,43 @@
+a{
+    text-decoration: none;
+}
+.h-logo{
+    width: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 15px;
+    transition: .75s ease-in-out;
+}
+
+.h-logo img{
+    width: 10vw;
+}
+
+.h-logo h4{
+    font-family: 'sunmora';
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgba(132,217,232,1) 0%,rgba(28,205,237,1) 45%,rgba(0,116,146,1) 100%); 
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 3.5em;
+}
+
+.h-logo p{
+    font-family: 'contra';
+    background: linear-gradient(to right, rgba(89,219,72,1) 0%,rgba(34,201,103,1) 40%,rgba(34,201,103,1) 40%,rgba(15,90,66,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 1.5em;
+    letter-spacing: .5em;
+}
+
+.h-logo:hover{
+    box-shadow: 0 0 10px rgb(184, 204, 209),
+        0 0 20px rgb(184, 204, 209, 0.75),
+        0 0 35px rgb(184, 204, 209, 0.5),
+        0 0 55px rgba(184, 204, 209, 0.25);
+}

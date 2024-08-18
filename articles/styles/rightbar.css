@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+#right .con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#right .con:nth-child(2) p{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.75em;
+    font-style: italic;
+    color: rgb(30, 66, 131);
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+#right .con:nth-child(1) .cnt{
+    width: 90%;
+    height: 98%;
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgb(0, 242, 96) 0%, rgb(5, 117, 230) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#right .con:nth-child(1) ul li{
+    list-style: none;
+    font-family: 'Raleway', sans-serif;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.2em;
+    color: cornsilk;
+}

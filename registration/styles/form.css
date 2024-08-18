@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+*{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after,
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body::after{
+    background: url('../../images/patty-brito-Y-3Dt0us7e0-unsplash.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+    z-index: -3;
+}
+
+body::before{
+    background: linear-gradient(to left, rgba(255,255,255,0) 25%,rgba(255,255,255,1) 100%);
+    clip-path: circle(100% at 75% 50%);
+    z-index: -2;
+}
+
+#page{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block:nth-child(1){
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 25px;
+    border: 2px solid rgb(226, 220, 220);
+    min-width: 300px;
+    min-height: 250px;
+}
+
+h3{
+    font-family: 'sunmora';
+    font-size: 2.25em;
+    left: 15px;
+    margin-bottom: 30px;
+}
+
+form .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+form input,
+form select,
+form textarea{
+    outline: none;
+    border: none;
+    padding: 7.5px;
+    border-radius: 7.5px;
+    background: rgba(255, 255, 255, 0.75);
+    font-size: 1.25em;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+form select{
+    color: rgb(78, 78, 78);
+    font-size: 1.1em;
+}
+
+form .btx{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 35px;
+}
+
+form label{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+}
+
+form button{
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    padding: 7.5px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    color: rgb(0 116 146);
+    background-color: rgb(37, 202, 149);
+}
+
+form section button:hover{
+    background-color: rgb(0 116 146);
+    color: rgb(37, 202, 149);
+}
+
+#log{
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5em;
+    padding: 5px;
+    transition: .75s ease-in-out;
+    color: rgb(163, 175, 175);
+}
+
+#log:hover{
+    color: ghostwhite;
+}

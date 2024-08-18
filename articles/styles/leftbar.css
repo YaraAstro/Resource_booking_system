@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+#left .box:nth-child(1) img{
+    width: 6.5em;
+}
+
+#left .box:nth-child(1) h4{
+    width: fit-content;
+    color: rgb(0 116 146);
+    font-family: 'sunmora';
+    text-transform: uppercase;
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+#left .box:nth-child(1) p{
+    width: fit-content;
+    color: rgb(37 202 149);
+    font-family: 'contra';
+    font-size: 1.25em;
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+
+#left .box{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#left .box:nth-child(1){
+    min-height: 250px;
+}
+
+#left .box ul{
+    margin-bottom: 10px;
+}
+
+#left .box ul li{
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 0;
+    padding: 10px;
+    color: rgb(46, 90, 57);
+}
+
+#left .box ul li:hover{
+    color: rgb(19, 77, 124);
+}
+
+#left .box ul li::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    border-radius: 3px;
+    width: 90%;
+    transition: .5s ease-in-out;
+    background: rgb(19, 77, 124);
+    transform: scale(0, 1);
+    transform-origin: left;
+    left: 0;
+    bottom: 5px;
+}
+
+#left .box ul li:hover:before{
+    transform: scale(1, 1);
+}
+
+#left .box:nth-child(3) img{
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    opacity: 0;
+    transition: opacity .75s ease;
+    object-fit: contain;
+    z-index: 2;
+    border-radius: 5px;
+}
+
+#left .box:nth-child(3) img.activate{
+    opacity: 1;
+}
+
+#left .box:nth-child(3) .slidbx{
+    width: 25vw;
+    height: 100%;
+}

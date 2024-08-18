@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+@font-face{
+    font-family: 'sunmora';
+    src: url('./fonts/SUNMORA-BOLD.TTF');
+}
+
+@font-face {
+    font-family: 'contra';
+    src: url('./fonts/CONTRA.OTF');
+}
+
+/*
+    font-family: 'Titillium Web', sans-serif;
+    font-family: 'sunmora';
+    font-family: 'contra';
+    font-family: 'Caveat', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Courgette', cursive;
+*/

@@ -1,0 +1,16 @@
+body{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(135deg, rgba(37,202,149,1) 0%,rgba(0,116,146,1) 100%);
+    border-radius: 5px;
+}

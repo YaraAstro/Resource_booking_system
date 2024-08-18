@@ -1,0 +1,248 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+#page{
+    padding-top: 75px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fame{
+    width: 100%;
+    min-height: 50vh;
+}
+
+.fame video{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 75%;
+}
+
+.fame:nth-child(1):before{
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(255,255,255,0) 45%,rgba(255,255,255,1) 85%);
+}
+
+.fame:nth-child(1) span{
+    position: absolute;
+    z-index: 3;
+    top: 10vh;
+    right: 10vw;
+    width: 50%;
+    text-align: right;
+}
+
+.fame:nth-child(1) span h3{
+    font-family: 'sunmora';
+    font-size: 3em;
+}
+
+.fame:nth-child(1) span p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15em;
+    width: 80%;
+    left: 20%;
+    top: 5vh;
+}
+
+.fame:nth-child(1) span a{
+    right: 5vw;
+    top: 10vh;
+}
+
+.fame:nth-child(1) span a img{
+    width: 5vw;
+    transition: .5s ease-in-out;
+    padding: 7.5px;
+    border-radius: 50%;
+}
+
+.fame:nth-child(1) span a:hover img{
+    filter: hue-rotate(45deg);
+    box-shadow: 0 0 5px lightskyblue,
+        0 0 15px rgba(135, 206, 250, 0.75);
+}
+
+/* second block */
+
+.fame:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fame:nth-child(2):before{
+    content: '';
+    position: absolute;
+    right: 2.5%;
+    top: 7px;
+    background: url('../images/team-young-specialist-doctors-standing-corridor-hospital.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 60%;
+    height: calc(100% - 14px);
+    filter: blur(5px);
+    z-index: -5;
+}
+
+.fame:nth-child(2):after{
+    content: '';
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,1) 65%,rgba(255,255,255,0) 95%);
+    z-index: -3;
+}
+
+.fame:nth-child(2) p{
+    width: 45%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15em;
+}
+
+.fame:nth-child(2) .brik{
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fame:nth-child(2) .brik::before{
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: -50%;
+    width: 250%;
+    height: 250%;
+    background: linear-gradient(135deg, rgba( 254, 140, 0, 1) 0%,rgba( 248, 54, 0, 1) 100%);
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    filter: blur(5px);
+}
+
+.fame:nth-child(2) .brik .blu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.fame:nth-child(2) .brik .blu p{
+    width: max-content;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: lighter;
+    font-size: 1.25em;
+}
+
+.fame:nth-child(2) .brik .blu img{
+    width: 2.5em;
+}
+
+/* third block */
+
+.fame:nth-child(3){
+    background: url('../images/health-still-life-with-copy-space.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    min-height: 100vh;
+}
+
+/* slideshow */
+
+.swiper{
+    width: 75vw;
+    left: 15vw;
+    transform: scale(0.75);
+    padding-bottom: 50px !important;
+}
+
+.swiper-slide{
+    width: 35vw !important;
+}
+
+.swiper-slide .image{
+    width: 100%;
+    height: 45vw;
+}
+
+.swiper-slide .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.swiper-slide .con{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    padding: 15px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 10px;
+    backdrop-filter: blur(5px) brightness(0.85);
+    background: linear-gradient(135deg, rgba( 254, 140, 0, 0.5) 0%,rgba( 248, 54, 0, 0.5) 100%);
+}
+
+.swiper-slide .con .cen{
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.swiper-slide .con .cen p{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    width: fit-content;
+    font-size: 2em;
+    margin-left: 5px;
+    background: linear-gradient(135deg, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.swiper-slide .con .cen:last-child p{
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.swiper-slide .con .cen img{
+    width: 2.5vw;
+}
+
+.swiper-slide h4{
+    font-family: 'sunmora';
+    font-size: 2.75em;
+    margin-left: 5px;
+    color: wheat;
+    font-weight: normal;
+    background: linear-gradient(180deg, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.pags{
+    bottom: 25px !important;
+    transform: scale(1.5) !important;
+    z-index: 5;
+}

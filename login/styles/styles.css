@@ -1,0 +1,216 @@
+*{
+    margin: 0%;
+    position: relative;
+    padding: 0%;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    color: initial;
+}
+
+body::before,
+body::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+body::before{
+    background: url('../../images/matheus-ferrero-yfmjALh1S6s-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -2;
+}
+
+body::after{
+    background: linear-gradient(to right, rgba(255,255,255,0) 35%,rgba(255,255,255,1) 85%);
+    clip-path: circle(100% at 35% 50%);
+    z-index: -1;
+}
+
+.frame{
+    width: 90%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.h-logo{
+    width: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.h-logo img{
+    width: 10vw;
+}
+
+.h-logo h4{
+    font-family: 'sunmora';
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgba(132,217,232,1) 0%,rgba(28,205,237,1) 45%,rgba(0,116,146,1) 100%); 
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 3.5em;
+}
+
+.h-logo p{
+    font-family: 'contra';
+    background: linear-gradient(to right, rgba(89,219,72,1) 0%,rgba(34,201,103,1) 40%,rgba(34,201,103,1) 40%,rgba(15,90,66,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 1.5em;
+    letter-spacing: .5em;
+}
+
+.h-logo:hover{
+    box-shadow: 0 0 10px rgb(184, 204, 209),
+        0 0 20px rgb(184, 204, 209, 0.75),
+        0 0 35px rgb(184, 204, 209, 0.5),
+        0 0 55px rgba(184, 204, 209, 0.25);
+}
+
+#visbtn img{
+    width: 1.5em;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: .5s ease-in-out;
+}
+
+#chk{
+    visibility: hidden;
+}
+
+#img01{
+    opacity: 0;
+}
+
+#img02{
+    opacity: 1;
+}
+
+#chk:checked ~ #img01{
+    opacity: 1;
+}
+
+#chk:checked ~ #img02{
+    opacity: 0;
+}
+
+/* form */
+
+.content:nth-child(2){
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 25px;
+    border: 2px solid rgb(226, 220, 220);
+    min-width: 300px;
+    min-height: 250px;
+}
+
+.content:nth-child(2) h3{
+    font-family: 'sunmora';
+    font-size: 2.25em;
+    left: 15px;
+    margin-bottom: 20px;
+}
+
+.content:nth-child(2) input{
+    outline: none;
+    border: none;
+    padding: 7.5px;
+    border-radius: 7.5px;
+    background: rgba(255, 255, 255, 0.75);
+    margin: 10px 0;
+    width: 90%;
+    font-size: 1.25em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content:nth-child(2) input[name="paswd"]{
+    padding-right: 40px;
+    width: calc(90% - 40px);
+    margin-bottom: 25px;
+}
+
+.content:nth-child(2) input:placeholder-shown{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25em;
+}
+
+#visbtn{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.fpw{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    background: linear-gradient(to left, #283c86, #45a247);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: .75s ease-in-out;
+}
+
+.fpw:hover{
+    background: linear-gradient(to right, #283c86, #45a247);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+form button{
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 25px;
+    left: 5vw;
+    top: 2vw;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    color: rgb(0 116 146);
+    background-color: rgb(37, 202, 149);
+}
+
+form button:hover{
+    background-color: rgb(0 116 146);
+    color: rgb(37, 202, 149);
+}
+
+.reg{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.15em;
+    display: block;
+    margin-top: 45px;
+    background: linear-gradient(45deg, rgb(0, 198, 255) 0%, rgb(0, 114, 255) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: .75s ease-in-out;
+}
+
+.reg:hover{
+    background: linear-gradient(-45deg, rgb(0, 198, 255) 0%, rgb(0, 114, 255) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}

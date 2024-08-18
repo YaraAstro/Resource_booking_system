@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding-top: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    font-size: 1.1em;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 1px 5px rgb(0 96 83);
+    z-index: 500;
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nvbox{
+    padding:0 20px;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+header .logo div:nth-child(2){
+    margin: 0 1.5vw;
+}
+
+header .logo h4{
+    margin: 0%;
+    font-family: 'sunmora';
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: rgb(0 116 146);
+}
+
+header .logo p{
+    margin: 0%;
+    font-family: 'contra';
+    font-size: 1.25em;
+    letter-spacing: 0.25em;
+    color: rgb(37 202 149);
+}
+
+header .logo img{
+    width: 4em;
+}
+
+.nvbox:nth-child(2) h1{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+    padding: 5px 35px;
+    background: linear-gradient(to right, rgb(40, 60, 134), rgb(69, 162, 71));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}

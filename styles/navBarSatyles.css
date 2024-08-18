@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@font-face{
+    font-family: 'sunmora';
+    src: url('./fonts/SUNMORA-BOLD.TTF');
+}
+
+@font-face {
+    font-family: 'contra';
+    src: url('./fonts/CONTRA.OTF');
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+header{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding-top: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    font-size: 1.1em;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 1px 5px rgb(0 96 83);
+    z-index: 500;
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+header .list{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header ul{
+    list-style: none;
+    margin: 0;
+}
+
+header ul li{
+    width: fit-content;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+header .logo div:nth-child(2){
+    margin: 0 1.5vw;
+}
+
+header .logo h4{
+    margin: 0%;
+    font-family: 'sunmora';
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: rgb(0 116 146);
+}
+
+header .logo p{
+    margin: 0%;
+    font-family: 'contra';
+    font-size: 1.25em;
+    letter-spacing: 0.25em;
+    color: rgb(37 202 149);
+}
+
+header .logo img{
+    width: 4em;
+}
+
+header .list ul:nth-child(1) li{
+    transition: .5s ease-in-out;
+    padding: 5px;
+    font-size: 1.15em;
+    color: black;
+}
+
+header .list ul:nth-child(1) li::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background-color: rgb(0 116 146);
+    top: 100%;
+    left: 0;
+    transition: .3s ease-in-out;
+}
+
+header .list ul:nth-child(2){
+    font-family: 'Poppins', sans-serif;
+}
+
+header .list ul:nth-child(2) li{
+    background-color: rgb(37 202 149);
+    padding: 10px 25px;
+    border-radius: 25px;
+    color: rgb(0 116 146);
+    transition: .5s ease-in-out;
+}
+
+header .list ul:nth-child(1) li:hover{
+    color: rgb(0 116 146);
+}
+
+header .list ul:nth-child(1) li:hover:after{
+    width: 100%;
+}
+
+header .list ul:nth-child(2) li:hover{
+    background-color: rgb(0 116 146);
+    color: rgb(37, 202, 149);
+}
+
+/* In small screens hamburger should be appeared */
+
+.hamburger-container{
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-container input{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+.hamburger-bar{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(37,202,149,1) 0%,rgba(44,234,161,1) 49%,rgba(0,197,204,1) 51%,rgba(0,116,146,1) 100%);
+    transition: .3s ease-in-out;
+}
+
+.hamburger-bar::before,
+.hamburger-bar::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(37,202,149,1) 0%,rgba(44,234,161,1) 49%,rgba(0,197,204,1) 51%,rgba(0,116,146,1) 100%);
+    transition: .3s ease-in-out;
+}
+
+.hamburger-bar::before{
+    top: -13px;
+    right: 0;
+}
+
+.hamburger-bar::after{
+    top: 13px;
+    right: 0;
+}
+
+
+@media screen and (max-width: 768px){
+    
+    header nav{
+        justify-content: space-between;
+    }
+
+    header .logo{
+        margin-left: 15px;
+    }
+    
+    header .logo img{
+        width: 3em;
+    }
+    
+    header .logo h4{
+        font-size: 1.5em;
+    }
+    
+    header .logo p{
+        font-size: 1em;
+    }
+    
+    header .list{
+        flex-direction: column;
+        position: absolute;
+        align-items: flex-end;
+        min-width: 350px;
+        right: 0%;
+        top: 0%;
+        padding-right: 50px;
+        padding-top: 65px;
+        min-height: 100vh;
+        z-index: -1;
+        backdrop-filter: blur(15px);
+        background-color: rgba(58, 58, 58, 0.548);
+        transition: .4s ease-in-out;
+        transform-origin: 100%;
+    }
+
+    header ul li{
+        display: block;
+        margin: 15px 0;
+        width: auto;
+        text-align: right;
+    }
+
+    header .list ul:nth-child(1) li{
+        color: cornsilk;
+    }
+
+    header .list ul:nth-child(1) li:hover{
+        color: rgb(46, 240, 178);
+    }
+
+    header .list ul:nth-child(1) li::after{
+        background-color: rgb(46, 240, 178);
+        width: 100%;
+        transform: scale(0, 1);
+        transform-origin: right;
+    }
+
+    header .list ul:nth-child(1) li:hover:after{
+        transform: scale(1, 1);
+    }
+
+    .hamburger-container{
+        position: relative;
+        display: block;
+        width: 35px;
+        right: 50px;
+    }
+
+    .hamburger-container input:checked ~ .hamburger-bar{
+        height: 0;
+    }
+
+    .hamburger-container input:checked ~ .hamburger-bar::before{
+        background: linear-gradient(135deg, rgba(254,204,177,1) 0%,rgba(241,116,50,1) 50%,rgba(234,85,7,1) 51%,rgba(251,149,94,1) 100%);
+        transform: rotate(45deg) translateY(8px) translateX(10px);
+    }
+
+    .hamburger-container input:checked ~ .hamburger-bar::after{
+        background: linear-gradient(135deg, rgba(254,204,177,1) 0%,rgba(241,116,50,1) 50%,rgba(234,85,7,1) 51%,rgba(251,149,94,1) 100%);
+        transform: rotate(-45deg) translateY(-8px) translateX(9px);
+    }
+
+    #navbox{
+        transform: scale(0, 1);
+    }
+}
