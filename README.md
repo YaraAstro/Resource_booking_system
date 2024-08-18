@@ -76,7 +76,7 @@ For more details, refer to the [XAMPP documentation](https://www.apachefriends.o
 
 - **Select the `ascepiushealthcare` Database.**
 - **Go to the “SQL” Tab.**
-- **Open the SQL File:** [Click here to open `create_tables.sql` in a new tab](./database/final%20creation/create_tables.sql){:target="_blank"}.
+- **Open the SQL File:** [Click here to open `create_tables.sql` in a new tab](./database/final%20creation/create_tables.sql).
 - **Paste & Execute SQL Code:** Copy the code from the SQL file and paste it into the query area in phpMyAdmin, then click "Go."
 
 #### 4. **Verify Setup:**
