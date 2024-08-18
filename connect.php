@@ -1,8 +1,8 @@
 <?php
-    $servername = "localhost";
-    $username = "healthcare";
-    $password = "Ascepius200";
-    $database = "ascepiushealthcare";
+    $servername = "sql110.infinityfree.com";
+    $username = "if0_37131410";
+    $password = "FREE100host";
+    $database = "if0_37131410_ascepiushealthcare";
 
     // Create a connection
     $conn = new mysqli($servername, $username, $password, $database);
